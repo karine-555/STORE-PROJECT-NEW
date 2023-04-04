@@ -1,19 +1,5 @@
-@font-face {
-  font-family: "poppins";
-  src: url(../fonts/Poppins-Regular.ttf);
-}
-@font-face {
-  font-family: "inter-medium";
-  src: url(../fonts/Inter-Medium.ttf);
-}
-@font-face {
-  font-family: "inter-bold";
-  src: url(../fonts/Inter-Bold.ttf);
-}
-@font-face {
-  font-family: "inter-semibold";
-  src: url(../fonts/Inter-SemiBold.ttf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Lexend:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500;600;700&display=swap");
 body {
   font-family: "poppins", sans-serif;
 }
@@ -36,6 +22,10 @@ body {
   cursor: pointer;
   text-decoration: none;
   border-radius: 4px;
+  transition: all 0.3s;
+}
+.redBtn:hover {
+  background: #f72e2e;
 }
 
 .hoveredicon svg path {
@@ -116,7 +106,8 @@ nav .container .nav__logo h2 a {
   color: #000000;
   text-decoration: none;
   font-size: 24px;
-  font-family: "inter-bold";
+  font-family: "inter", sans-serif;
+  font-weight: 700;
 }
 nav .container .nav__menu {
   display: flex;
@@ -385,7 +376,8 @@ header .container .header__slider .header__slider__content .header__slider__left
   color: #fafafa;
 }
 header .container .header__slider .header__slider__content .header__slider__left .header__slider__title h4 {
-  font-family: "inter-bold";
+  font-family: "inter", sans-serif;
+  font-weight: 600;
   font-size: min(48px, max(24px + 2vw));
   letter-spacing: 2px;
   color: #fafafa;
@@ -476,7 +468,6 @@ header .container .header__slider .header__slider__dots .dot.active__dot {
     overflow-y: hidden;
     overflow-x: auto;
     gap: 32px;
-    scroll-snap-type: x mandatory;
   }
   header .container .header__menu::after {
     display: none;
@@ -517,354 +508,388 @@ header .container .header__slider .header__slider__dots .dot.active__dot {
 
 main {
   margin-top: 140px;
+  margin-bottom: 140px;
+  padding-bottom: 70px;
 }
-main .today__block .today__block__top {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+main .container .items__template__section {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1882352941);
+  margin-bottom: 70px;
 }
-main .today__block .today__block__top .rect {
+main .container .items__template__section .its__category__title {
+  color: #db4444;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  padding-left: 32px;
+  line-height: 40px;
+  margin: 0px 0px 24px 0px;
+}
+main .container .items__template__section .its__category__title::before {
+  content: "";
   width: 20px;
   height: 40px;
-  background: #db4444;
   border-radius: 4px;
+  background-color: #db4444;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
-main .today__block .today__block__top h4 {
-  font-size: 16px;
-  font-family: "poppins";
-  font-weight: 600;
-  color: #db4444;
+main .container .items__template__section .its__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-main .today__block .today__block__header {
+main .container .items__template__section .its__header .itsh__left {
   display: flex;
   align-items: center;
   gap: 87px;
 }
-main .today__block .today__block__header h2 {
-  font-family: "inter-medium";
+main .container .items__template__section .its__header .itsh__left .its__header__title {
+  font-family: "inter", sans-serif;
   font-weight: 600;
   font-size: min(36px, max(18px + 2vw));
-  color: #000000;
+  margin: 0;
 }
-main .today__block .today__block__header .today__block__time .first__line {
+main .container .items__template__section .its__header .itsh__left .timer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 52px;
-}
-main .today__block .today__block__header .today__block__time .first__line .first__line__item span {
-  width: 31px;
-  height: 18px;
-  font-family: "poppins";
-  font-weight: 500;
-  font-size: 12px;
-  color: #000000;
-}
-main .today__block .today__block__header .today__block__time .second__line {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 17px;
 }
-main .today__block .today__block__header .today__block__time .second__line .second__line__item {
-  font-family: "inter-bold";
+main .container .items__template__section .its__header .itsh__left .timer h5 {
+  margin: 0;
+}
+main .container .items__template__section .its__header .itsh__left .timer h5 span {
+  display: block;
+}
+main .container .items__template__section .its__header .itsh__left .timer h5 span:first-child {
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+main .container .items__template__section .its__header .itsh__left .timer h5 span:last-child {
+  font-size: min(32px, max(16px + 2vw));
+  font-family: "inter", sans-serif;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 30px;
 }
-main .today__block .today__block__header .today__block__icon {
-  display: flex;
-  gap: 8px;
-  margin-left: 319px;
-  align-items: center;
+main .container .items__template__section .its__header .itsh__left .timer .seperator {
+  margin-top: 20px;
 }
-main .today__block .today__block__content {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 30px;
-}
-main .today__block .today__block__content .today__block__items .today__block__item {
-  width: 270px;
-  height: 250px;
-  background: #f5f5f5;
-  border-radius: 4px;
-  position: relative;
-}
-main .today__block .today__block__content .today__block__items .today__block__item .item__1 {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 12px;
-  gap: 10px;
+main .container .items__template__section .its__header .itsh__left .timer .seperator div {
+  width: 4px;
+  height: 4px;
   background: #db4444;
-  border-radius: 4px;
-  top: 12px;
-  left: 12px;
-}
-main .today__block .today__block__content .today__block__items .today__block__item .svg__1 {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-}
-main .today__block .today__block__content .today__block__items .today__block__item .svg__2 {
-  position: absolute;
-  top: 54px;
-  right: 12px;
-}
-main .today__block .today__block__content .today__block__items .today__block__item .today__img1 {
-  position: absolute;
-  top: 35px;
-  left: 40px;
-}
-main .today__block .today__block__content .today__block__items h4 {
-  margin-top: 16px;
+  border-radius: 50% 50%;
   margin-bottom: 8px;
-  font-family: "poppins";
-  font-weight: 500;
-  font-size: 16px;
-  color: #000000;
 }
-main .today__block .today__block__content .today__block__items .span {
+main .container .items__template__section .its__header .itsh__left .timer .seperator divlast-child {
+  margin-bottom: unset;
+}
+main .container .items__template__section .its__header .itsh__right {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 12px;
-  width: 85px;
-  height: 24px;
-  order: 1;
-}
-main .today__block .today__block__content .today__block__items .span span {
-  font-family: "poppins";
-  font-weight: 500;
-  font-size: 16px;
-}
-main .today__block .today__block__content .today__block__items .span span:nth-child(1) {
-  color: #db4444;
-}
-main .today__block .today__block__content .today__block__items .span span:nth-child(2) {
-  color: #000000;
-}
-main .today__block .today__block__content .today__block__items .today__block__stars {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
   gap: 8px;
+  cursor: pointer;
 }
-main .today__block .today__block__content .today__block__items .today__block__stars span {
-  font-family: "poppins";
-  font-weight: 600;
-  font-size: 14px;
-  color: #000000;
-}
-main .today__block .today__block__footer {
-  margin-top: 60px;
-  margin-bottom: 60px;
+main .container .items__template__section .its__header .itsh__right .left__btn,
+main .container .items__template__section .its__header .itsh__right .right__btn {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+  width: 46px;
+  height: 46px;
+  border-radius: 50% 50%;
 }
-main .today__block .today__block__footer a {
-  display: inline-block;
-  padding: 16px 48px;
-  background: #db4444;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  font-family: "poppins";
-  color: #fafafa;
+main .container .items__template__section .its__header .itsh__right .left__btn svg,
+main .container .items__template__section .its__header .itsh__right .right__btn svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
 }
-main .today__block .footer__line {
-  width: 1170px;
-  opacity: 0.3;
-  border: 0.5px solid #000000;
+main .container .items__template__section .its__header .itsh__right .left__btn svg path,
+main .container .items__template__section .its__header .itsh__right .right__btn svg path {
+  fill: #000000;
+}
+main .container .items__template__section .its__header .itsh__right .left__btn:first-child svg,
+main .container .items__template__section .its__header .itsh__right .right__btn:first-child svg {
   transform: rotate(180deg);
 }
-main .categories__block {
-  margin-top: 80px;
+main .container .items__template__section .its__header .itsh__right .left__btn:hover svg path,
+main .container .items__template__section .its__header .itsh__right .right__btn:hover svg path {
+  fill: #db4444;
 }
-main .categories__block .categories__block__top {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-main .categories__block .categories__block__top .rect {
-  width: 20px;
-  height: 40px;
-  background: #db4444;
-  border-radius: 4px;
-}
-main .categories__block .categories__block__top h4 {
-  font-size: 16px;
-  font-family: "poppins";
-  font-weight: 600;
-  color: #db4444;
-}
-main .categories__block .categories__block__header {
-  width: 1170px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-main .categories__block .categories__block__header h2 {
-  font-family: "inter-medium";
-  font-weight: 600;
-  font-size: min(36px, max(18px + 2vw));
-  color: #000000;
-}
-main .categories__block .categories__block__header .categories__block__icon {
-  display: flex;
-  gap: 8px;
-  margin-left: 319px;
-  align-items: center;
-}
-main .categories__block .categories__block__content {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 30px;
-}
-main .categories__block .categories__block__content .categories__block__items:nth-child(4) {
-  background: #db4444;
-  border-radius: 4px;
-}
-main .categories__block .categories__block__content .categories__block__items .categories__block__item {
-  position: relative;
-  width: 170px;
-  height: 145px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-}
-main .categories__block .categories__block__content .categories__block__items .categories__block__item div {
-  position: absolute;
-  top: 25px;
-  left: 57px;
-}
-main .categories__block .categories__block__content .categories__block__items .categories__block__item p {
-  position: absolute;
-  top: 97px;
-  left: 55px;
-}
-main .thismonth__block {
-  margin-top: 70px;
-}
-main .thismonth__block .thismonth__block__top {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-main .thismonth__block .thismonth__block__top .rect {
-  width: 20px;
-  height: 40px;
-  background: #db4444;
-  border-radius: 4px;
-}
-main .thismonth__block .thismonth__block__top h4 {
-  font-size: 16px;
-  font-family: "poppins";
-  font-weight: 600;
-  color: #db4444;
-}
-main .thismonth__block .thismonth__block__header {
-  width: 1170px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-main .thismonth__block .thismonth__block__header h2 {
-  font-family: "inter-medium";
-  font-weight: 600;
-  font-size: min(36px, max(18px + 2vw));
-  color: #000000;
-}
-main .thismonth__block .thismonth__block__header a {
-  display: inline-block;
-  padding: 16px 48px;
-  background: #db4444;
-  text-decoration: none;
-  color: #fafafa;
-  font-weight: 500;
-  font-size: 16px;
-  border-radius: 4px;
-}
-main .thismonth__block .thismonth__block__content {
+main .container .items__template__section .its__items {
   margin-top: 40px;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
   gap: 30px;
 }
-main .thismonth__block .thismonth__block__content .thismonth__block__items .thismonth__block__item {
-  width: 270px;
-  height: 250px;
+main .container .items__template__section .its__items .its__item {
+  flex-basis: 270px;
+}
+main .container .items__template__section .its__items .its__item .its__item__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #f5f5f5;
+  padding: 12px;
   border-radius: 4px;
   position: relative;
+  max-width: 270px;
+  max-height: 250px;
+  min-width: 270px;
+  min-height: 250px;
+  overflow: hidden;
 }
-main .thismonth__block .thismonth__block__content .thismonth__block__items .thismonth__block__item .svg__1 {
+main .container .items__template__section .its__items .its__item .its__item__header .sale {
   position: absolute;
   top: 12px;
-  right: 12px;
+  left: 12px;
+  background: #db4444;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-main .thismonth__block .thismonth__block__content .thismonth__block__items .thismonth__block__item .svg__2 {
+main .container .items__template__section .its__items .its__item .its__item__header .wishlist,
+main .container .items__template__section .its__items .its__item .its__item__header .preview {
+  width: 34px;
+  height: 34px;
+  border-radius: 50% 50%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+main .container .items__template__section .its__items .its__item .its__item__header .wishlist {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+main .container .items__template__section .its__items .its__item .its__item__header .preview {
   position: absolute;
   top: 54px;
   right: 12px;
 }
-main .thismonth__block .thismonth__block__content .thismonth__block__items .thismonth__block__item .thismonth__img1 {
+main .container .items__template__section .its__items .its__item .its__item__header .image {
+  max-width: 172px;
+  max-height: 152px;
+  overflow: hidden;
+}
+main .container .items__template__section .its__items .its__item .its__item__header .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .container .items__template__section .its__items .its__item .its__item__header .to__basket {
+  padding: 8px 16px;
+  text-align: center;
+  background: #000000;
+  cursor: pointer;
+  color: #ffffff;
   position: absolute;
-  top: 35px;
-  left: 40px;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  transition: all 0.3s;
 }
-main .thismonth__block .thismonth__block__content .thismonth__block__items h4 {
-  margin-top: 16px;
-  margin-bottom: 8px;
-  font-family: "poppins";
+main .container .items__template__section .its__items .its__item .its__item__header .to__basket:hover {
+  background: green;
+  color: black;
+}
+main .container .items__template__section .its__items .its__item .its__iitem__title {
   font-weight: 500;
-  font-size: 16px;
+  margin: 16px 0px 0px 0px;
+}
+main .container .items__template__section .its__items .its__item .its__iitem__title a {
+  text-decoration: none;
   color: #000000;
-}
-main .thismonth__block .thismonth__block__content .thismonth__block__items .span {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 12px;
-  width: 85px;
-  height: 24px;
-  order: 1;
-}
-main .thismonth__block .thismonth__block__content .thismonth__block__items .span span {
-  font-family: "poppins";
-  font-weight: 500;
   font-size: 16px;
 }
-main .thismonth__block .thismonth__block__content .thismonth__block__items .span span:nth-child(1) {
+main .container .items__template__section .its__items .its__item .its__item__price {
+  display: flex;
+  gap: 12px;
+  margin: 8px 0px;
+}
+main .container .items__template__section .its__items .its__item .its__item__price .current__price,
+main .container .items__template__section .its__items .its__item .its__item__price .old__price {
+  margin: 0px;
+}
+main .container .items__template__section .its__items .its__item .its__item__price .current__price {
   color: #db4444;
 }
-main .thismonth__block .thismonth__block__content .thismonth__block__items .span span:nth-child(2) {
+main .container .items__template__section .its__items .its__item .its__item__price .old__price {
   color: #000000;
+  opacity: 0.5;
+  text-decoration: line-through;
+  font-weight: 500;
 }
-main .thismonth__block .thismonth__block__content .thismonth__block__items .thismonth__block__stars {
+main .container .items__template__section .its__items .its__item .its__item__review {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
+  align-items: center;
   gap: 8px;
 }
-main .thismonth__block .thismonth__block__content .thismonth__block__items .thismonth__block__stars span {
-  font-family: "poppins";
-  font-weight: 600;
+main .container .items__template__section .its__items .its__item .its__item__review .comments__count p {
   font-size: 14px;
   color: #000000;
+  opacity: 0.5;
+  font-weight: 600;
+  margin: 0;
+}
+main .container .items__template__section .its__items .its__item .its__item__btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+main .container .items__template__section .its__items .its__item .its__item__btns .its__item__btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #db4444;
+  border: 2px solid #ffffff;
+  outline: 1px solid #000000;
+  box-sizing: border-box;
+}
+main .container .items__template__section .its__items .its__item .its__item__btns .its__item__btn:first-child {
+  width: 17px;
+  height: 17px;
+}
+main .container .items__template__section .its__items .its__item .its__item__btns .its__item__btn:last-child {
+  border: none;
+  outline: none;
+}
+main .container .items__template__section .its__items .its__item .its__item__btns .its__item__btn.black {
+  background: #000000;
+}
+main .container .items__template__section .its__items .its__item .its__item__btns .its__item__btn.yellow {
+  background: yellow;
+}
+main .container .items__template__section .its__items .its__item:hover .its__item__header .to__basket {
+  bottom: 0px;
+}
+main .container .items__template__section .categories {
+  display: flex;
+  gap: 30px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+main .container .items__template__section .categories .category a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 170px;
+  height: 145px;
+  border: 1px solid rgba(0, 0, 0, 0.3019607843);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+main .container .items__template__section .categories .category a svg {
+  margin-bottom: 16px;
+}
+main .container .items__template__section .categories .category a svg path,
+main .container .items__template__section .categories .category a svg line {
+  transition: inherit;
+}
+main .container .items__template__section .categories .category a span {
+  font-size: 16px;
+  color: #000000;
+  transition: inherit;
+}
+main .container .items__template__section .categories .category a:hover {
+  background: #db4444;
+  border-color: #db4444;
+}
+main .container .items__template__section .categories .category a:hover svg path,
+main .container .items__template__section .categories .category a:hover svg line {
+  stroke: #ffffff;
+}
+main .container .items__template__section .categories .category a:hover span {
+  color: #ffffff;
+}
+main .container .items__template__section .redBtn {
+  margin: 60px auto 60px auto;
+}
+main .container .categories__section {
+  margin-bottom: 73px;
+  max-width: 1170px;
+  max-height: 500px;
+  display: flex;
+  padding: 37px 44px 43px 56px;
+  gap: 27px;
+  background: #000000;
+}
+main .container .categories__section .categories__left h5 {
+  font-weight: 600;
+  font-size: 16px;
+  color: #00ff66;
+  margin: 0;
+}
+main .container .categories__section .categories__left h2 {
+  font-family: "inter", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  color: #fafafa;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+main .container .categories__section .categories__left .timer {
+  display: flex;
+  gap: 24px;
+}
+main .container .categories__section .categories__left .timer .timer__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50% 50%;
+  background: #ffffff;
+}
+main .container .categories__section .categories__left .timer .timer__item p {
+  font-weight: 400;
+  font-size: 11px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+main .container .categories__section .categories__left .timer .timer__item span {
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000;
+}
+main .container .categories__section .categories__left .green {
+  background: #00ff66;
+  margin-top: 40px;
+  margin-bottom: 69px;
+}
+main .container .categories__section .categories__right {
+  padding: 37px 44px 43px 0px;
+}
+main .container .categories__section .categories__right .categories__right__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  border-radius: 50% 50%;
+  box-shadow: 10px 10px 100px 50px #f5f5f5;
+}
+main .container .categories__section .categories__right .categories__right__img img {
+  display: block;
+  width: 100%;
+  height: inherit;
 }
 
 * {
